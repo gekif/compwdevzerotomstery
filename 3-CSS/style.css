@@ -6,11 +6,23 @@ selector {
 }
 */
 
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
 h2 {
-    color: red;
+    color: #AA4139;
+    text-align: center;
+    border: 5px solid rgba(255, 176, 170, 0.5);
+    cursor: pointer;
 }
 
 p {
     color: blue;
 }
 
+li {
+    list-style: none;
+    display: inline-block;
+}
