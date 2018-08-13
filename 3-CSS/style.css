@@ -6,12 +6,20 @@ selector {
 }
 */
 
+* {
+    text-align: right;
+}
+
 body {
     background-image: url(background.jpg);
     background-size: cover;
 }
 
-h2 {
+/*h2, p {*/ /* h2 and p */
+/*h2  p {*/ /* p inside h2 */
+/*h2 > p { !* p which h2 is parent *!*/
+/*h2 + p { !* select p element after h2 *!*/
+h2 + p:hover { /* select p element after h2 */
     color: #AA4139;
     text-align: center;
     border: 5px solid rgba(255, 176, 170, 0.5);
@@ -19,10 +27,32 @@ h2 {
 }
 
 p {
-    color: blue;
+    /*color: blue !important; !* This is the only one *!*/
+    color: blue; /* This is the only one */
+}
+
+p {
+    color: pink;
 }
 
 li {
     list-style: none;
     display: inline-block;
+}
+
+/*.webtext:last-child {*/
+.webtext:first-child {
+    border: 5px dashed green;
+}
+
+.active {
+    color: red;
+}
+
+#div1 {
+    background:  rgba(0, 0, 255, 0.2);
+}
+
+#div2 {
+    background:  rgba(255, 0, 255, 0.2);
 }
