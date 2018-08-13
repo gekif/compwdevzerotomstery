@@ -2,6 +2,7 @@ function sayHello() {
     console.log('Hellow');
 }
 
+//Function expression
 var sayBye = function () {
     console.log('goodbye');
 };
