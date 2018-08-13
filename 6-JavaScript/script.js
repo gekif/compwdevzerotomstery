@@ -1,9 +1,25 @@
-var a = 4 + 3;
+function sayHello() {
+    console.log('Hellow');
+}
 
+var sayBye = function () {
+    console.log('goodbye');
+};
+
+var sing = function (sing) {
+    console.log("i'm singing " + sing);
+};
+
+
+
+input.onclick = function () {
+    var a = '';
+    var b = prompt("Choose your song" + a);
+    sing(b);
+};
 
 button.onclick = function () {
-    if (a == 7) {
-        alert("You're smart");
-        console.log('Nice')
-    }
+    sayHello();
+    sayBye();
 };
+
