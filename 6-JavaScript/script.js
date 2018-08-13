@@ -2,7 +2,15 @@ var database = [
     {
         username: "Fikar",
         password: "12345"
-    }
+    },
+    {
+        username: "Antoka",
+        password: "12345"
+    },
+    {
+        username: "Miras",
+        password: "12345"
+    },
 ];
 
 var newsFeed = [
@@ -13,19 +21,34 @@ var newsFeed = [
     {
         username: "Sally",
         timeline: "Javascipt is cool"
+    },
+    {
+        username: "Mirah",
+        timeline: "Ngokkkk"
     }
 ];
 
-var userNamePrompt = prompt("What's your username?");
-var passwordPrompt = prompt("Enter your password");
 
-function singIn(user, pass) {
-    if (user === database[0].username &&
-        pass === database[0].password) {
+function isUserValid(username, password) {
+    for (var i = 0; i < database.length; i++) {
+        if (database[i].username === username &&
+            database[i].password === password) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function singIn(username, password) {
+    if (isUserValid(username, password)) {
         console.log(newsFeed);
     } else {
-        alert("Incorrect");
+        alert("Incorrect username or password");
     }
 }
+
+
+var userNamePrompt = prompt("What's your username?");
+var passwordPrompt = prompt("Enter your password");
 
 singIn(userNamePrompt, passwordPrompt);
