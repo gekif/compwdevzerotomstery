@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Hello from './Hello';
+import CardList from './CardList';
 import registerServiceWorker from './registerServiceWorker';
 import 'tachyons';
+import {robots} from './robots';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
-// ReactDOM.render(<h1>Hello World</h1>, document.getElementById('root'));
-ReactDOM.render(<Hello greeting={'Hello ' + 'React Ninja'}/>, document.getElementById('root'));
-// registerServiceWorker();
+ReactDOM.render(
+        <CardList robots={robots}/>
+, document.getElementById('root'));
+registerServiceWorker();
