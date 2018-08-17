@@ -1,9 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
+const cors = require('cors');
+
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors());
 
 const database = {
     users:
@@ -11,6 +14,7 @@ const database = {
             {
                 id: '123',
                 name: 'fikar',
+                password: 'polah',
                 email: 'fikar@gmail.com',
                 entries: 0,
                 joined: new Date()
@@ -18,6 +22,7 @@ const database = {
             {
                 id: '321',
                 name: 'Febrina',
+                password: 'tempo',
                 email: 'febrina.maulana@gmail.com',
                 entries: 0,
                 joined: new Date()
@@ -102,7 +107,7 @@ app.post('/image', (req, res) => {
 
 
 
-app.listen(3000, () => {
+app.listen(3005, () => {
     console.log('Running');
 });
 
